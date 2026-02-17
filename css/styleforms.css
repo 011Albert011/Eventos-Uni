@@ -19,21 +19,31 @@ body {
 }
 
 /*======Apartado contactos.html=====*/
-.contactanos{
+.contactanos {
     text-align: center;
 }
+
 .formu {
-    border: 2px solid black;
+    border: 1px solid black;
     padding: 20px;
     display: flex;
     flex-direction: column;
     width: 40%;
-    height: 70%;
+    height: auto;
     gap: 10px;
     box-shadow: 10px 10px 25px 3px black;
     border-radius: 10px;
 }
-input{
+
+.form-box {
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+input {
     flex-basis: 100px;
     flex-grow: 1;
     flex-shrink: 1;
@@ -41,15 +51,20 @@ input{
     padding: 5px;
     border-left: 2px solid black;
 }
-.form-box {
-    border: 1px solid black;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    padding-left: 10px;
+
+.form-box:has(input:focus) {
+    border: 2px solid black;
 }
 
-.formu textarea {
+.form-box svg {
+    margin-left: 10px;
+}
+
+.form-box textarea {
+    flex-basis: 100px;
+    flex-grow: 1;
+    text-align: left;
+    padding: 5px;
     resize: none;
 }
 
@@ -57,6 +72,422 @@ input{
     align-self: flex-start;
 }
 
-#resultConts {
-    text-align: center;
+@media (width<=468px) {
+    .formu {
+        border: 1px solid black;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        gap: 10px;
+        box-shadow: 10px 10px 25px 3px black;
+        border-radius: 10px;
+    }
+
+    .form-box {
+        width: 100%;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    input {
+        flex-basis: 100px;
+        flex-grow: 1;
+        flex-shrink: 1;
+        outline: none;
+        padding: 5px;
+        border-left: none;
+    }
+
+    .form-box:has(input:focus) {
+        border: 2px solid black;
+    }
+
+    .form-box svg {
+        display: none;
+    }
+
+    .form-box textarea {
+        flex-basis: 100px;
+        flex-grow: 1;
+        text-align: left;
+        padding: 5px;
+        resize: none;
+    }
+
+    .formu .boton {
+        width: 100%;
+        align-self: flex-start;
+    }
+}
+
+@media ((width>=468px) and (width<=575px)) {
+    .formu {
+        border: 1px solid black;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        gap: 10px;
+        box-shadow: 10px 10px 25px 3px black;
+        border-radius: 10px;
+    }
+
+    .form-box {
+        width: 100%;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    input {
+        flex-basis: 100px;
+        flex-grow: 1;
+        flex-shrink: 1;
+        outline: none;
+        padding: 5px;
+    }
+
+    .form-box:has(input:focus) {
+        border: 2px solid black;
+    }
+
+    .form-box svg {
+        margin-left: 10px;
+    }
+
+    .form-box textarea {
+        flex-basis: 100px;
+        flex-grow: 1;
+        text-align: left;
+        padding: 5px;
+        resize: none;
+    }
+
+    .formu .boton {
+        width: 100%;
+        align-self: flex-start;
+    }
+}
+
+/* Móviles pequeños (menos de 576px) */
+@media (min-width: 575px) {
+
+    /* Estilos para móviles */
+    .formu {
+        border: 1px solid black;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 10px;
+        border-radius: 10px;
+    }
+
+    .form-box {
+        width: 100%;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    input {
+        flex-basis: 100px;
+        flex-grow: 1;
+        flex-shrink: 1;
+        outline: none;
+        padding: 5px;
+    }
+
+    .form-box:has(input:focus) {
+        border: 2px solid black;
+    }
+
+    .form-box svg {
+        margin-left: 10px;
+    }
+
+    .form-box textarea {
+        flex-basis: 100px;
+        flex-grow: 1;
+        text-align: left;
+        padding: 5px;
+        resize: none;
+    }
+
+    .formu .boton {
+        width: 100%;
+        align-self: center;
+    }
+
+}
+
+/* Móviles grandes / Tablets pequeñas (576px - 767px) */
+@media (min-width: 576px) and (max-width: 754px) {
+
+    /* Estilos para tablets pequeñas */
+    .formu {
+        border: 1px solid black;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height:auto;
+        gap: 10px;
+        box-shadow: 10px 10px 25px 3px black;
+        border-radius: 10px;
+    }
+
+    .form-box {
+        width: 100%;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    input {
+        flex-basis: 100px;
+        flex-grow: 1;
+        flex-shrink: 1;
+        outline: none;
+        padding: 5px;
+    }
+
+    .form-box:has(input:focus) {
+        border: 2px solid black;
+    }
+
+    .form-box svg {
+        margin-left: 10px;
+    }
+
+    .form-box textarea {
+        flex-basis: 100px;
+        flex-grow: 1;
+        text-align: left;
+        padding: 5px;
+        resize: none;
+    }
+
+    .formu .boton {
+        width: 100%;
+        align-self: center;
+    }
+}
+
+/* Tablets (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    /* Estilos para tablets */
+    .formu {
+        border: 1px solid black;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 90%;
+        gap: 10px;
+        box-shadow: 10px 10px 25px 3px black;
+        border-radius: 10px;
+    }
+
+    .form-box {
+        width: 100%;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    input {
+        flex-basis: 100px;
+        flex-grow: 1;
+        flex-shrink: 1;
+        outline: none;
+        padding: 5px;
+    }
+
+    .form-box:has(input:focus) {
+        border: 2px solid black;
+    }
+
+    .form-box svg {
+        margin-left: 10px;
+    }
+
+    .form-box textarea {
+        flex-basis: 100px;
+        flex-grow: 1;
+        text-align: left;
+        padding: 5px;
+        resize: none;
+    }
+
+    .formu .boton {
+        align-self: flex-start;
+    }
+}
+
+/* Escritorio pequeño / Laptops (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    /* Estilos para laptops */
+    .formu {
+        border: 1px solid black;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        height: 90%;
+        gap: 20px;
+        border-radius: 10px;
+    }
+
+    .form-box {
+        width: 100%;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    input {
+        flex-basis: 100px;
+        flex-grow: 1;
+        flex-shrink: 1;
+        outline: none;
+        padding: 20px;
+    }
+
+    .form-box:has(input:focus) {
+        border: 2px solid black;
+    }
+
+    .form-box svg {
+        margin-left: 10px;
+    }
+
+    .form-box textarea {
+        flex-basis: 100px;
+        flex-grow: 1;
+        text-align: left;
+        padding: 5px;
+        resize: none;
+    }
+
+    .formu .boton {
+        width: 100%;
+        align-self: center;
+    }
+}
+
+/* Escritorio grande (1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+
+    /* Estilos para desktop */
+    .formu {
+        border: 1px solid black;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        height: 80%;
+        gap: 10px;
+        box-shadow: 10px 10px 25px 3px black;
+        border-radius: 10px;
+    }
+
+    .form-box {
+        width: 100%;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    input {
+        flex-basis: 100px;
+        flex-grow: 1;
+        flex-shrink: 1;
+        outline: none;
+        padding: 10px;
+    }
+
+    .form-box:has(input:focus) {
+        border: 2px solid black;
+    }
+
+    .form-box svg {
+        margin-left: 10px;
+    }
+
+    .form-box textarea {
+        flex-basis: 100px;
+        flex-grow: 1;
+        text-align: left;
+        padding: 5px;
+        resize: none;
+    }
+
+    .formu .boton {
+        align-self: flex-start;
+    }
+}
+
+@media (width>=1400px) {
+    .formu {
+        border: 1px solid black;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        height: 80%;
+        gap: 10px;
+        box-shadow: 10px 10px 25px 3px black;
+        border-radius: 10px;
+    }
+
+    .form-box {
+        width: 100%;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    input {
+        flex-basis: 100px;
+        flex-grow: 1;
+        flex-shrink: 1;
+        outline: none;
+        padding: 10px;
+    }
+
+    .form-box:has(input:focus) {
+        border: 2px solid black;
+    }
+
+    .form-box svg {
+        margin-left: 10px;
+    }
+
+    .form-box textarea {
+        flex-basis: 100px;
+        flex-grow: 1;
+        text-align: left;
+        padding: 5px;
+        resize: none;
+    }
+
+    .formu .boton {
+        align-self: flex-start;
+    }
 }
