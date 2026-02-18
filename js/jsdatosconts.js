@@ -1,4 +1,3 @@
-
 function guardar() {
     const nombre = document.querySelector("#nombre").value;
     const email = document.querySelector("#email").value;
@@ -25,6 +24,7 @@ function guardar() {
         alert("Los datos han sido guardados correctamente")
     }
 }
-function buscarDato() {
 
+function buscarDato() {
+     
 }
