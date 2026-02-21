@@ -1,0 +1,114 @@
+<!doctype html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Crear Evento</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="css/img/EventosU-logo-transparent.png" alt="Logo" />
+      </a>
+    </header>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="eventos.html">Crear Evento</a>
+      <a href="asistentes.html">Asistentes</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <div>
+      <!-- DIV del contenido principal -->
+      <h1>Crear Evento</h1>
+      <main>
+        <form>
+          <fieldset>
+            <div>
+              <!-- inicio div campos -->
+
+              <div>
+                <!-- div de campo -->
+                <label>Titulo del evento</label>
+                <input
+                  type="text"
+                  placeholder="Escribe el título del evento"
+                  required
+                />
+              </div>
+
+              <div>
+                <!-- div de campo -->
+                <label>Tipo de evento</label>
+                <select required>
+                  <option value="" disabled selected>
+                    --Seleccionar tipo--
+                  </option>
+                  <option value="conferencia">Conferencia</option>
+                  <option value="taller">Taller</option>
+                  <option value="curso">Curso</option>
+                  <option value="congreso">Congreso</option>
+                </select>
+              </div>
+
+              <div>
+                <!-- div de campo -->
+                <label>Fecha y hora:</label>
+                <input type="datetime-local" required />
+                <!-- probablemente se tenga que poner un id aquí para que con javascript no se pueda elegir una fecha y hora pasadas -->
+              </div>
+
+              <div>
+                <!-- div de campo -->
+                <label>Sede</label>
+                <select required>
+                  <option value="" disabled selected>
+                    --Seleccionar sede--
+                  </option>
+                  <option value="sede1">Sede 1</option>
+                  <option value="sede2">Sede 2</option>
+                  <option value="sede3">Sede 3</option>
+                </select>
+              </div>
+
+              <div>
+                <!-- div de campo -->
+                <label>Cupo máximo</label>
+                <input
+                  type="number"
+                  min="10"
+                  max="50"
+                  required
+                  placeholder="Elige un número entre 10 y 50"
+                />
+              </div>
+
+              <div>
+                <!-- div de campo -->
+                <label>Descripción</label>
+                <input
+                  type="text"
+                  placeholder="Añade una descripción del evento"
+                  required
+                />
+              </div>
+            </div>
+            <!-- fin div campos -->
+            <div>
+              <!-- div del botón enviar -->
+              <input type="submit" value="Enviar" />
+            </div>
+          </fieldset>
+        </form>
+      </main>
+    </div>
+    <footer>
+      <p>EventosU. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="" async defer></script>
+  </body>
+</html>
