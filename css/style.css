@@ -1,0 +1,130 @@
+:root{
+    --blanco: #FFF;
+    --negro: #000;
+
+    --principal: #263D55;
+    --color-nav: #1F2C41;
+    --resaltado-nav: #5ee9bd;
+    --resaltado: #4DB695;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(../fuentes/Inter/static/Inter_18pt-Regular.ttf);
+}
+
+@font-face{
+    font-family: 'Inter bold';
+    src: url(../fuentes/Inter/static/Inter_18pt-Bold.ttf);
+}
+
+
+
+/*--- --- --- ESTILOS GENERALES --- --- ---*/
+*{
+    font-family: 'Inter';
+}
+
+/*--- --- Header --- ---*/
+header{
+    background-color: var(--principal);
+    height: 111px;
+}
+
+header img{
+    height: 78px;
+}
+
+/*--- --- Barra de navegación --- --- */
+.navegacion{
+    height: 53px;
+    padding: 0 15%;
+
+    background-color: var(--color-nav);
+}
+
+.navegacion a{
+    color: var(--blanco);
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.selected-page{
+    color: var(--resaltado-nav) !important;
+}
+
+
+/*--- --- Main --- ---*/
+main{
+    padding: 0 6%;
+}
+
+main h1{
+    font-family: 'Inter bold';
+    text-align: center;
+    font-weight: bolder;
+    font-size: 35px;
+    margin: 28px 0;
+}
+
+/*--- Tarjeta de evento ---*/
+.card{
+    border-radius: 23px !important;
+    width: 48%;
+}
+
+.card .card-title{
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: var(--resaltado);
+    margin-bottom: 15px;
+}
+
+/*--------------------------------------------------- INDEX ---------------------------------------------------*/
+/*--- --- Barra de búsqueda --- --- */
+.barra-busqueda{
+    padding: 5px 20px;
+
+    background-color: var(--principal);
+    color: var(--blanco);
+}
+
+
+.input-busqueda svg, .input-tipo svg, .input-fecha svg{
+    color: var(--negro);
+    position: absolute;
+    top: 6px;
+    left: 12px;
+}
+
+
+.input-busqueda, .input-tipo, .input-fecha{
+    position: relative;
+    margin-left: 5px;
+}
+
+.input-busqueda input{
+    width: 200px;
+    padding: 0 3px 0 35px;
+}
+
+
+.input-tipo select,.input-fecha input{
+    text-align: center;
+    padding: 0 0 0 30px;
+}
+
+.input-tipo select{
+    width: 170px;
+}
+
+.input-fecha input{
+    width: 150px;
+}
+
+
+
+
+
