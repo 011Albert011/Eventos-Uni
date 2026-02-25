@@ -1,0 +1,109 @@
+/*--- Asistentes ---*/
+    .asistentes__container {
+        max-width: 1000px;
+        width: 100%;
+    }
+
+    /*--- Controles de la Table ---*/
+    main .controles-tabla {
+        width: 90%;
+        margin-bottom: 15px;
+    }
+
+    main .controles-tabla label {
+        font-size: 16px;
+    }
+
+    main .controles-tabla select {
+        background-color: var(--blanco);
+        padding: 5px 5px;
+        font-size: 17px;
+        border: 1px solid var(--resaltado);
+        border-radius: 4px;
+    }
+
+    main .controles-tabla button {
+        background-color: var(--resaltado);
+        color: var(--blanco);
+        font-family: 'Inter bold';
+        font-size: 17px;
+        border: none;
+        padding: 5px 8px 5px 8px;
+        border-radius: 4px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+
+    /*--- Table Head ---*/
+    .asistentes__table-head {
+        background-color: #212529;
+        height: 50px;
+    }
+
+    .asistentes__table-head th {
+        color: var(--blanco);
+        text-align: center;
+        font-size: 17px;
+    }
+
+    /*--- Table Body ---*/
+    .asistentes__table-body td {
+        background-color: var(--color--campos);
+        text-align: center;
+        font-size: 17px;
+        height: 45px;
+    }
+
+    .asistentes__table-body td button {
+        background-color: transparent;
+        border: none;
+
+        transition: color 0.3s ease;
+    }
+
+    .asistentes__table-body td button:hover {
+        background-color: var(--resaltado);
+    }
+
+    .asistentes__table-body td button svg {
+        height: 18px;
+        width: 18px;
+    }
+
+
+/*--- MediaQueries ---*/
+@media (max-width: 768px) {
+    /*--- Asistentes ---*/
+    .asistentes__container {
+        max-width: 400px;
+    }
+
+    main .controles-tabla label {
+        font-size: 12px;
+    }
+
+    main .controles-tabla select {
+        padding: 5px 0px;
+        width: 50%;
+        font-size: 14px;
+    }
+
+    main .controles-tabla button {
+        font-size: 14px;
+        padding: 5px 8px;
+    }
+
+    .asistentes__table-head th {
+        font-size: 13px;
+        min-width: 65px;
+    }
+
+    .asistentes__table-body td {
+        font-size: 13px;
+    }
+
+    .asistentes__table-body td button svg {
+        height: 15px;
+        width: 15px;
+    }
+}
