@@ -1,8 +1,9 @@
 /*--- --- Barra de búsqueda --- --- */
 .barra-busqueda {
     height: auto; 
+    position: relative;
     font-size: 16;
-    padding: 15px 20px;
+    padding: 15px 20px 0px 15px;
     background-color: var(--principal);
 }
 
@@ -12,7 +13,6 @@
     top: 50%;
     left: 15px;
     transform: translateY(-50%);
-    z-index: 5;
     pointer-events: none;
 }
 
@@ -20,6 +20,7 @@
     position: relative;
     width: 100%;
 }
+
 
 .input-busqueda input, .input-tipo select, .input-fecha input {
     width: 100% !important; 
@@ -29,6 +30,45 @@
 
 .input-tipo select, .input-fecha input{
     text-align: center;
+}
+
+.contenedor-input {
+    flex: 1 1 100%; 
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.barra-busqueda-flex{
+    gap: 10px;
+}
+
+@media (min-width: 768px) {
+    .contenedor-input {
+        margin-bottom: 15px;
+    }
+    
+    .busqueda {
+        flex: 1 1 50%; /* Ocupa el 50% del ancho */
+        min-width: 80px;
+    }
+    
+    .filtro {
+        flex: 1 1 50%; /* Ocupa el 20% */
+        min-width: 270px;
+        max-width: 270px;
+    }
+    
+    .fecha {
+        flex: 1 1 50%; /* Ocupa el 20% */
+        max-width: 270px;
+    }
+}
+
+.contenedor-input input, 
+.contenedor-input select {
+    width: 100% !important;
+    box-sizing: border-box;
 }
 
 /*--- Tarjetas de evento ---*/

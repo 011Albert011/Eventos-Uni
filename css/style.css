@@ -10,12 +10,12 @@
 
 @font-face {
     font-family: 'Inter';
-    src: url(../fuentes/Inter/static/Inter_18pt-Regular.ttf);
+    src: url(../fuentes/Inter_18pt-Regular.ttf);
 }
 
 @font-face{
     font-family: 'Inter bold';
-    src: url(../fuentes/Inter/static/Inter_18pt-Bold.ttf);
+    src: url(../fuentes/Inter_18pt-Bold.ttf);
 }
 
 
@@ -31,11 +31,7 @@ html, body{
 }
 
 body{
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
-
-    overflow-x: hidden;
     width: 100%;
 }
 
@@ -66,29 +62,39 @@ header img{
 
 /*--- --- Barra de navegación --- --- */
 .navegacion {
-    height: auto;
-    min-height: 53px;
-    padding: 10px 5%; 
+    height: auto;         
+    min-height: 53px; 
+    display: flex;
+    flex-wrap: wrap; 
+    padding: 10px 2%;      
     background-color: var(--color-nav);
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;    
 }
 
 
 .navegacion a {
-    width: 120px;
+    width: auto; 
+    min-width: 80px; 
+    
+    display: inline-block;
+    margin: 15px 12px; 
+    font-size: 16px;
     text-align: center;
     color: var(--blanco);
     text-decoration: none;
-    font-size: 16px; /* Un poco más pequeño para móvil */
-    margin: 5px 10px;
-
+    
     transition: color 0.3s ease;
 }
+
+
 
 @media screen and (min-width: 768px) {
     .navegacion a {
         width: auto;
         font-size: 20px;
+        margin: 5px;
     }
 }
 
@@ -135,7 +141,8 @@ footer p{
 /*--- --- --- Media queries --- --- ---*/
 @media screen and (max-width: 768px){
     header img{
-        width: 90%;
+        width: 95%;
         margin: 0 auto;
     }
 }
+
