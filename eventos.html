@@ -8,9 +8,9 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/style_eventos.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/style_eventos.css" />
   </head>
 
   <body class="d-flex flex-column min-vh-100">
@@ -24,19 +24,20 @@
       <a href="index.html">Inicio</a>
       <a class="selected-page" href="eventos.html">Crear Evento</a>
       <a href="asistentes.html">Asistentes</a>
-      <a href="contacto.html">Contacto</a>
+      <a href="contactos.html">Contacto</a>
     </nav>
 
     <main class="flex-grow-1 d-flex flex-column align-items-center">
       <h1>Crear Evento</h1>
 
       <div class="container__eventos">
-        <form class="d-flex flex-column gap-4">
+        <form id="form-evento" class="d-flex flex-column gap-4">
           <div class="eventos__campo">
             <!-- div de campo -->
             <label>Titulo del evento :</label>
             <input
               type="text"
+              id="titulo"
               placeholder="Escribe el título del evento"
               required
             />
@@ -45,10 +46,8 @@
           <div class="eventos__campo">
             <!-- div de campo -->
             <label>Tipo de evento :</label>
-            <select required>
-              <option value="" disabled selected>
-                --Seleccionar tipo--
-              </option>
+            <select id="tipo" required>
+              <option value="" disabled selected>--Seleccionar tipo--</option>
               <option value="conferencia">Conferencia</option>
               <option value="taller">Taller</option>
               <option value="curso">Curso</option>
@@ -59,20 +58,18 @@
           <div class="eventos__campo">
             <!-- div de campo -->
             <label>Fecha y hora :</label>
-            <input type="datetime-local" required />
-            <!-- probablemente se tenga que poner un id aquí para que con javascript no se pueda elegir una fecha y hora pasadas -->
+            <input type="datetime-local" id="fecha" required />
           </div>
 
           <div class="eventos__campo">
             <!-- div de campo -->
             <label>Sede :</label>
-            <select required>
-              <option value="" disabled selected>
-                --Seleccionar sede--
-              </option>
-              <option value="sede1">Sede 1</option>
-              <option value="sede2">Sede 2</option>
-              <option value="sede3">Sede 3</option>
+            <select id="sede" required>
+              <option value="" disabled selected>--Seleccionar sede--</option>
+              <option value="Auditorio ICC">Auditorio ICC</option>
+              <option value="Laboratorio 3">Laboratorio 3</option>
+              <option value="CCU BUAP">CCU BUAP</option>
+              <option value="Aula Magna FCC">Aula Magna FCC</option>
             </select>
           </div>
 
@@ -81,6 +78,7 @@
             <label>Cupo máximo :</label>
             <input
               type="number"
+              id="cupo"
               min="10"
               max="50"
               required
@@ -89,10 +87,10 @@
           </div>
 
           <div class="eventos__campo">
-            <!-- div de campo -->
             <label>Descripción :</label>
             <input
               type="text-area"
+              id="descripcion"
               placeholder="Añade una descripción del evento"
               required
             />
@@ -101,7 +99,7 @@
 
           <div class="eventos__enviar align-self-end">
             <!-- div del botón enviar -->
-            <input type="submit" value="Enviar">
+            <input type="submit" value="Enviar" />
           </div>
         </form>
       </div>
@@ -111,6 +109,6 @@
       <p>EventosU - Todos los derechos reservados.</p>
     </footer>
 
-    <script src="" async defer></script>
+    <script src="js/crear_evento.js"></script>
   </body>
 </html>

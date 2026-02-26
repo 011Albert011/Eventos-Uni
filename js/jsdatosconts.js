@@ -1,30 +1,39 @@
+// Funcion para procesar el formulario de contacto
 function guardar() {
+    // Captura de valores por ID
     const nombre = document.querySelector("#nombre").value;
     const email = document.querySelector("#email").value;
-    const mensaje = (document.querySelector("#mensaje").value).trim();
+    const mensaje = document.querySelector("#mensaje").value.trim();
     
-    if (nombre === '' || email === '' || mensaje === '') {
-        alert("No a completado todos los campos");
-    }
-    else {
-        //Obtenemos todos los datos de la localstorage para ahora convertirlo de json string a objeto o creamos un arreglo vacio si este esta vacio 
-        let datosObtenidos = JSON.parse(localStorage.getItem("misdatos")) || [];
-        //Agregamos mas elementos a la lista con el metodo push
-        datosObtenidos.push(
-            {
-                nombreUser: nombre,
-                emailUser: email,
-                mensajeUser: mensaje,
-            }
-        )
-        //Lo regresamos a string
-        const datosstorage = JSON.stringify(datosObtenidos)
-        localStorage.setItem("misdatos", datosstorage)
-        console.log(datosObtenidos);
-        alert("Los datos han sido guardados correctamente")
-    }
-}
+    // Expresion regular para verificar formato de correo 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-function buscarDato() {
-     
+    // Verificacion de campos obligatorios
+    if (nombre === '' || email === '' || mensaje === '') {
+        alert("Todos los campos son obligatorios");
+        return;
+    }
+
+    // Verificacion de email valido 
+    if (!emailRegex.test(email)) {
+        alert("Ingrese un correo electronico valido");
+        return;
+    }
+
+    // Guardado opcional en localStorage para persistencia 
+    let mensajesPrevios = JSON.parse(localStorage.getItem("mensajes_contacto")) || [];
+    mensajesPrevios.push({
+        usuario: nombre,
+        correo: email,
+        texto: mensaje,
+        fecha: new Date().toISOString()
+    });
+    
+    localStorage.setItem("mensajes_contacto", JSON.stringify(mensajesPrevios));
+
+    // Confirmacion de envio exitoso 
+    alert("Mensaje enviado con exito");
+    
+    // Limpieza del formulario tras el envio
+    document.querySelector("form").reset();
 }

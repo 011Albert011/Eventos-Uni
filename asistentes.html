@@ -8,9 +8,9 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/style_asistentes.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/style_asistentes.css" />
   </head>
 
   <body class="d-flex flex-column min-vh-100">
@@ -19,12 +19,12 @@
         <img src="css/img/EventosU-logo-transparent.png" alt="Logo" />
       </a>
     </header>
-    
+
     <nav class="navegacion d-flex align-items-center justify-content-around">
       <a href="index.html">Inicio</a>
       <a href="eventos.html">Crear Evento</a>
       <a class="selected-page" href="asistentes.html">Asistentes</a>
-      <a href="contacto.html">Contacto</a>
+      <a href="contactos.html">Contacto</a>
     </nav>
 
     <!-- DIV del contenido principal -->
@@ -37,13 +37,13 @@
           <label>Selecciona el evento:</label>
 
           <div class="d-flex justify-content-between align-items-center">
-            <select id="" class="border-secondary">
+            <select id="selector-evento" class="border-secondary">
               <option value="" selected disabled>--Elige un evento--</option>
               <option value="1">Taller de Ciberseguridad</option>
               <option value="2">Conferencia de IA</option>
             </select>
 
-            <button type="button">Exportar a TXT</button>
+            <button type="button" id="btn-exportar">Exportar a TXT</button>
           </div>
         </div>
         <!-- FIN div select evento y exportar txt -->
@@ -61,38 +61,11 @@
               </tr>
             </thead>
 
-            <tbody class="asistentes__table-body" id="cuerpo-tabla-asistentes">
-              <tr>
-                <td>0001</td>
-                <td>Juan Pérez</td>
-                <td>juan@mail.com</td>
-                <td>
-                  <span class="badge rounded-pill bg-success">Confirmado</span>
-                </td>
-                <td>
-                  <button type="button">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-check2"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"
-                      />
-                    </svg>
-                  </button>
-
-                  <button type="button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
-                      <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
-                    </svg>
-                  </button>
-                </td>
-              </tr>
-            </tbody>
+            <tbody
+              class="asistentes__table-body"
+              id="cuerpo-tabla-asistentes"
+              itemid="cuerpo-tabla-asistentes"
+            ></tbody>
           </table>
         </div>
       </div>
@@ -102,6 +75,6 @@
       <p>EventosU - Todos los derechos reservados.</p>
     </footer>
 
-    <script src="" async defer></script>
+    <script src="js/asistentes.js"></script>
   </body>
 </html>
