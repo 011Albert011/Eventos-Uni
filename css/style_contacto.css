@@ -1,8 +1,8 @@
 /*--- --- Formulario de contacto --- ---*/
 .container__contactos {
     font-size: 17px;
-    width: 95%; 
-    max-width: 800px; 
+    width: 95%;
+    max-width: 800px;
     background-color: #F4F7F9;
     justify-self: center;
     border-radius: 10px;
@@ -10,7 +10,7 @@
     padding: 30px 20px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
- 
+
 @media screen and (min-width: 768px) {
     .container__contactos {
         width: 70%;
@@ -18,15 +18,15 @@
     }
 }
 
-.container__contactos input, .container__contactos textarea{
+.container__contactos input, .container__contactos textarea {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
-.container__contactos label, .container__contactos input{
+.container__contactos label, .container__contactos input {
     margin-bottom: 10px;
 }
 
-.container__contactos textarea{
+.container__contactos textarea {
     height: 293px;
     margin-bottom: 25px;
 }
