@@ -78,6 +78,8 @@
     
     justify-items: center;
     margin-bottom: 20px;
+
+    row-gap: 30px;/* añaidi esta para separar las filas */
 }
 
 .card{
