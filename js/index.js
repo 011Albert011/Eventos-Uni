@@ -32,7 +32,7 @@ const eventosBase = [
 // 2. Logica para asegurar persistencia en localStorage
 function cargarSistema() {
   const datosGuardados = localStorage.getItem("eventosU");
-  if (!datosGuardados) {
+  if (datosGuardados==null) {
     localStorage.setItem("eventosU", JSON.stringify(eventosBase));
     console.log("Sistema Inicializado.");
   }
@@ -80,22 +80,14 @@ function renderizarEventos(listaFiltrada = null) {
 // 4. Logica de busqueda y filtros
 function aplicarFiltros() {
   const todosLosEventos = JSON.parse(localStorage.getItem("eventosU"));
-  const textoBusqueda = document
-    .getElementById("input_buscar")
-    .value.toLowerCase();
-  const tipoSeleccionado = document
-    .getElementById("input_filtro")
-    .value.toLowerCase();
+  const textoBusqueda = document.getElementById("input_buscar").value.toLowerCase();
+  const tipoSeleccionado = document.getElementById("input_filtro").value.toLowerCase();
   const fechaSeleccionada = document.querySelector('input[type="date"]').value;
 
   const filtrados = todosLosEventos.filter((evento) => {
-    const coincideTexto =
-      evento.titulo.toLowerCase().includes(textoBusqueda) ||
-      evento.sede.toLowerCase().includes(textoBusqueda);
-    const coincideTipo =
-      tipoSeleccionado === "" || evento.tipo === tipoSeleccionado;
-    const coincideFecha =
-      fechaSeleccionada === "" || evento.fecha === fechaSeleccionada;
+    const coincideTexto =evento.titulo.toLowerCase().includes(textoBusqueda) || evento.sede.toLowerCase().includes(textoBusqueda);
+    const coincideTipo =tipoSeleccionado === "" || evento.tipo === tipoSeleccionado;
+    const coincideFecha =fechaSeleccionada === "" || evento.fecha === fechaSeleccionada;
     return coincideTexto && coincideTipo && coincideFecha;
   });
 
@@ -107,13 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
   cargarSistema();
   renderizarEventos();
 
-  document
-    .getElementById("input_buscar")
-    .addEventListener("input", aplicarFiltros);
-  document
-    .getElementById("input_filtro")
-    .addEventListener("change", aplicarFiltros);
-  document
-    .querySelector('input[type="date"]')
-    .addEventListener("change", aplicarFiltros);
+  document.getElementById("input_buscar").addEventListener("input", aplicarFiltros);
+  document.getElementById("input_filtro").addEventListener("change", aplicarFiltros);
+  document.querySelector('input[type="date"]').addEventListener("change", aplicarFiltros);
 });

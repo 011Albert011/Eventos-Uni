@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="icon" type="image/png" href="img/logo-head.png">
     <title>EventosU - Contactos</title>
 </head>
+
 <body>
     <header class="d-flex align-items-center justify-content-center">
         <a href="index.html">
@@ -25,33 +27,34 @@
     <main>
         <h1>Contáctanos</h1>
         <div class="container__contactos">
-            <div class="container__contactos__texto">
-                <form action="">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" placeholder="Introduce tu nombre" class="form-control" required>
-                    
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Introduce tu correo" class="form-control" required>
-                    
-                    <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" class="form-control" rows="10" placeholder="Introduce un mensaje" required></textarea>
-                    
-                    <div class="d-flex justify-content-end mt-3">
-                        <button type="button" onclick="guardar()" class="btn btn-success">
-                            Enviar
-                        </button>
-                    </div>
-                </form>
-            </div>
+            <form action="">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" placeholder="Introduce tu nombre" class="form-control" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Introduce tu correo" class="form-control" required>
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" class="form-control" rows="10" placeholder="Introduce un mensaje"
+                    required></textarea>
+
+                <div class="d-flex justify-content-end mt-3">
+                    <button type="button" onclick="guardar()" class="btn btn-success">
+                        Enviar
+                    </button>
+                </div>
+            </form>
         </div>
     </main>
 
     <footer class="d-flex justify-content-center align-items-center">
-        <hr> <div class="footer-contenido">
+        <hr>
+        <div class="footer-contenido">
             <p>EventosU - Todos los derechos reservados.</p>
         </div>
     </footer>
 
     <script src="js/jsdatosconts.js"></script>
 </body>
+
 </html>
