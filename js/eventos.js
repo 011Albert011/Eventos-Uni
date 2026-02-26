@@ -1,8 +1,8 @@
 // 1. Datos semilla para el sistema
 const eventosBase = [
-    { id: 1, titulo: "Conferencia de IA - BUAP", fecha: "2026-03-15", sede: "Auditorio ICC", tipo: "conferencia", cupo: 50 },
-    { id: 2, titulo: "Taller de Bootstrap 5", fecha: "2026-03-20", sede: "Laboratorio 3", tipo: "taller", cupo: 20 },
-    { id: 3, titulo: "Congreso de Software", fecha: "2026-04-10", sede: "CCU BUAP", tipo: "congreso", cupo: 100 }
+    { id: 1, titulo: "Conferencia de IA - BUAP", fecha: "2026-03-15", hora: "20:00", sede: "Auditorio ICC", tipo: "conferencia", cupo: 50 },
+    { id: 2, titulo: "Taller de Bootstrap 5", fecha: "2026-03-20", hora: "23:00", sede: "Laboratorio 3", tipo: "taller", cupo: 20 },
+    { id: 3, titulo: "Congreso de Software", fecha: "2026-04-10", hora: "02:00", sede: "CCU BUAP", tipo: "congreso", cupo: 100 }
 ];
 
 // 2. Logica para asegurar persistencia en localStorage
@@ -33,6 +33,7 @@ function renderizarEventos(listaFiltrada = null) {
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title text-primary">${evento.titulo}</h5>
                     <p class="card-text">📅 <b>Fecha:</b> ${evento.fecha}</p>
+                    <p class="card-text">⏰ <b>Hora:</b> ${evento.hora || 'No definida'}</p>
                     <p class="card-text">📍 <b>Sede:</b> ${evento.sede}</p>
                     <p class="card-text">🏷️ <b>Tipo:</b> <span class="badge bg-info text-dark">${evento.tipo}</span></p>
                     <p class="card-text">👥 <b>Cupo restante:</b> ${evento.cupo}</p>
