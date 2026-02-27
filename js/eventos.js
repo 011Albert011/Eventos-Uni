@@ -23,7 +23,7 @@ function renderizarEventos(listaFiltrada = null) {
     contenedor.innerHTML = '';
 
     if (eventosAMostrar.length === 0) {
-        contenedor.innerHTML = '<p class="text-white text-center">No se encontraron eventos.</p>';
+        contenedor.innerHTML = '<p class="text-dark text-center">No se encontraron eventos.</p>';
         return;
     }
 
