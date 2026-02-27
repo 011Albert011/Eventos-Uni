@@ -22,10 +22,14 @@ function renderizarEventos(listaFiltrada = null) {
 
     contenedor.innerHTML = '';
 
-    if (eventosAMostrar.length === 0) {
-        contenedor.innerHTML = '<p class="text-dark text-center">No se encontraron eventos.</p>';
-        return;
-    }
+if (eventosAMostrar.length === 0) {
+    contenedor.innerHTML = `
+        <p class="text-dark text-center py-5" 
+        style="grid-column: 1 / -1; width: 100%; font-weight: bold;">
+        No se encontraron eventos.
+        </p>`;
+    return; 
+}
 
     eventosAMostrar.forEach(evento => {
         const cardHTML = `
